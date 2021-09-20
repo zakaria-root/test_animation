@@ -1,12 +1,20 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Animated, StyleSheet, Text, View } from 'react-native';
+import PostInput from './commponent/PostInput';
+import WhatsappRecordAnimation from './commponent/whatsappRecordAnimation';
 
 export default function App() {
+  
+
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <WhatsappRecordAnimation />
+      <WhatsappRecordAnimation />
+      <WhatsappRecordAnimation />
+      <WhatsappRecordAnimation />
+      <WhatsappRecordAnimation />
+      <WhatsappRecordAnimation />
     </View>
   );
 }
@@ -14,8 +22,11 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    paddingTop: 70,
+    alignItems : 'center',
+    
+
+    
   },
+
 });
