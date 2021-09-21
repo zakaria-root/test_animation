@@ -1,22 +1,44 @@
 import React from 'react';
-import { StyleSheet } from 'react-native';
+import { Animated, StyleSheet } from 'react-native';
 import { TextInput, View, Text } from 'react-native';
 
 const WhatsappUserMention = () => {
+
+    
+    const itemTranslatY = new Animated.Value(200);
     const ListItem = () => {
         return(
-            <View style={styles.list}>
+            <Animated.View style={[styles.list, {transform :[
+                {translateY : itemTranslatY},
+               
+            ]}]}>
                 <Text style={styles.name}>hajar khairi</Text>
                 <Text style={styles.name}>zaid caidi</Text>
-            </View>
+            </Animated.View>
         )
     }
+    
+    
+    const TextChangHandler = (val) => {
+        
+        const lastChar = val.charAt(val.length -1)
+            
+        if(lastChar === '@'){
+            
+            Animated.spring(itemTranslatY, {
+                toValue : 0
+            }).start()
+        }
+    }
+    
+   
     return(
         <View style={styles.container}>
             <ListItem />
             <View style={styles.input}>
             <TextInput 
             placeholder="Type Here !!"
+            onChangeText={TextChangHandler}
             />
             </View>
         </View>
