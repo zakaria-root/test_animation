@@ -1,11 +1,11 @@
 import React from 'react';
-import { Animated, StyleSheet } from 'react-native';
+import { Animated, StyleSheet, TouchableWithoutFeedback } from 'react-native';
 import { TextInput, View, Text } from 'react-native';
 
 const WhatsappUserMention = () => {
 
     
-    const itemTranslatY = new Animated.Value(200);
+    const itemTranslatY = new Animated.Value(300);
     const ListItem = () => {
         return(
             <Animated.View style={[styles.list, {transform :[
@@ -14,6 +14,8 @@ const WhatsappUserMention = () => {
             ]}]}>
                 <Text style={styles.name}>hajar khairi</Text>
                 <Text style={styles.name}>zaid caidi</Text>
+                <Text style={styles.name}>kawtar mourtazak</Text>
+                <Text style={styles.name}>youssf khwili</Text>
             </Animated.View>
         )
     }
@@ -66,9 +68,10 @@ const styles = StyleSheet.create({
         borderWidth : 1,
         margin: 5,
         padding: 8,
-        borderRadius: 10,
+        borderRadius: 15,
         borderColor: 'gray',
-
+        backgroundColor: 'gray',
+        color: 'white',
     },
     list:{
         alignItems: 'flex-start',
