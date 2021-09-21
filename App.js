@@ -3,18 +3,14 @@ import React from 'react';
 import { Animated, StyleSheet, Text, View } from 'react-native';
 import PostInput from './commponent/PostInput';
 import WhatsappRecordAnimation from './commponent/whatsappRecordAnimation';
-
+import WhatsappUserMention from './commponent/whatsappUserMention';
 export default function App() {
   
 
   return (
     <View style={styles.container}>
-      <WhatsappRecordAnimation />
-      <WhatsappRecordAnimation />
-      <WhatsappRecordAnimation />
-      <WhatsappRecordAnimation />
-      <WhatsappRecordAnimation />
-      <WhatsappRecordAnimation />
+      
+      <WhatsappUserMention />
     </View>
   );
 }
@@ -22,9 +18,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: 70,
-    alignItems : 'center',
-    
+  
 
     
   },
