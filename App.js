@@ -1,23 +1,22 @@
 
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import WhatsappRecordEntireAnimation from './commponent/WhatsappRecordEntireANimation';
-
+import TranslateCircel from './commponent/translateCircel';
 
 export default function App() {
   
 
   return (
     <View style={styles.container}>
+      <TranslateCircel />
       
-      <WhatsappRecordEntireAnimation />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex: 1
   },
 
 });
