@@ -1,16 +1,16 @@
-import { StatusBar } from 'expo-status-bar';
+
 import React from 'react';
-import { Animated, StyleSheet, Text, View } from 'react-native';
-import PostInput from './commponent/PostInput';
-import WhatsappRecordAnimation from './commponent/whatsappRecordAnimation';
-import WhatsappUserMention from './commponent/whatsappUserMention';
+import { StyleSheet, View } from 'react-native';
+import WhatsappRecordEntireAnimation from './commponent/WhatsappRecordEntireANimation';
+
+
 export default function App() {
   
 
   return (
     <View style={styles.container}>
       
-      <WhatsappUserMention />
+      <WhatsappRecordEntireAnimation />
     </View>
   );
 }
@@ -18,9 +18,6 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-  
-
-    
   },
 
 });
